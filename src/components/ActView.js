@@ -1,31 +1,9 @@
 import { useState } from "react";
 
-import questionOne from "./images/act-matrix-q1.png";
-import questionTwo from "./images/act-matrix-q2.png";
-import questionThree from "./images/act-matrix-q3.png";
-import questionFour from "./images/act-matrix-q4.png";
-import questionFive from "./images/act-matrix-q5.png";
-import "./App.css";
+import ActQuestion from "./ActQuestion";
+import questions from "../questions";
 
-const questionImgs = [
-  questionOne,
-  questionTwo,
-  questionThree,
-  questionFour,
-  questionFive,
-];
-
-const Header = () => <h2 className="header">Let's Matrix</h2>;
-
-const ActQuestion = ({ questionImg }) => {
-  return (
-    <div className="act-question">
-      <img src={questionImg} alt="act matrix question" />
-    </div>
-  );
-};
-
-const ActSection = () => {
+const ActView = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState(["", "", "", "", ""]);
 
@@ -48,11 +26,11 @@ const ActSection = () => {
     console.log("Submitted matrix with the following answers:", answers);
   };
 
-  const questionImg = questionImgs[currentQuestion];
+  const questionImg = questions[currentQuestion];
   const answer = answers[currentQuestion];
 
   return (
-    <div className="act-section">
+    <div className="act-view">
       <ActQuestion questionImg={questionImg} />
       <textarea
         className="act-answer"
@@ -66,7 +44,7 @@ const ActSection = () => {
             Previous
           </button>
         )}
-        {currentQuestion === questionImgs.length - 1 ? (
+        {currentQuestion === questions.length - 1 ? (
           <button className="btn-progress" onClick={handleSubmitClick}>
             Submit
           </button>
@@ -80,13 +58,4 @@ const ActSection = () => {
   );
 };
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <ActSection />
-    </div>
-  );
-}
-
-export default App;
+export default ActView;

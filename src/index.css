@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.header {
+  margin: 20px 0 60px 0;
+  text-align: center;
+}
+
+.act-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.act-question {
+  max-width: 300px;
+  margin-bottom: 60px;
+}
+
+.act-question img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+}
+
+.act-answer {
+  width: 300px;
+  height: 100px;
+}
+
+.btn-group {
+  width: 300px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.btn-group .btn-progress {
+  position: absolute;
+  right: 0;
+}
+
+.btn-group .btn-previous {
+  position: absolute;
+  left: 0;
+}
