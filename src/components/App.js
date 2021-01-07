@@ -1,13 +1,12 @@
+import { Fragment } from "react";
 import Header from "./Header";
 import ActView from "./ActView";
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <ActView />
-    </div>
-  );
-}
+const App = () => (
+  <Fragment>
+    <Header />
+    <ActView />
+  </Fragment>
+);
 
 export default App;
