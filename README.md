@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# The ACT Matrix
+
+The ACT Matrix is designed to improve psychological flexibility over time. It was
+created by Kevin Polk, founder of the [ACT Matrix Academy](https://www.theactmatrixacademy.com/).
+
+This web app provides a way to easily complete the ACT matrix while on the go. It's purely for self use, **none of your
+data is saved**.
+
+# Developers
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
