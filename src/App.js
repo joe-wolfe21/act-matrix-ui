@@ -19,7 +19,9 @@ const Header = () => <h2 className="header">Let's Matrix</h2>;
 
 const ActQuestion = ({ questionImg }) => {
   return (
-    <img src={questionImg} className="act-question" alt="act matrix question" />
+    <div className="act-question">
+      <img src={questionImg} alt="act matrix question" />
+    </div>
   );
 };
 
@@ -60,16 +62,16 @@ const ActSection = () => {
       />
       <div className="btn-group">
         {currentQuestion > 0 && (
-          <button className="act-btn" onClick={handlePreviousClick}>
+          <button className="btn-previous" onClick={handlePreviousClick}>
             Previous
           </button>
         )}
         {currentQuestion === questionImgs.length - 1 ? (
-          <button className="act-btn" onClick={handleSubmitClick}>
+          <button className="btn-progress" onClick={handleSubmitClick}>
             Submit
           </button>
         ) : (
-          <button className="act-btn" onClick={handleNextClick}>
+          <button className="btn-progress" onClick={handleNextClick}>
             Next
           </button>
         )}
