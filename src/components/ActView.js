@@ -35,6 +35,8 @@ const ActView = () => {
     return <ResultsView answers={answers} />;
   }
 
+  const lastAnswerableQuestion = questions.length - 1;
+
   return (
     <div className="act-view">
       <ActQuestion questionImg={questionImg} />
@@ -50,7 +52,7 @@ const ActView = () => {
             Previous
           </button>
         )}
-        {currentQuestion === questions.length - 1 ? (
+        {currentQuestion === lastAnswerableQuestion ? (
           <button className="btn-progress" onClick={handleSubmitClick}>
             Submit
           </button>
