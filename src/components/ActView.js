@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
 
 import ActQuestion from "./ActQuestion";
 import ResultsView from "./ResultsView";
@@ -35,6 +36,8 @@ const ActView = () => {
     return <ResultsView answers={answers} />;
   }
 
+  const lastAnswerableQuestion = questions.length - 1;
+
   return (
     <div className="act-view">
       <ActQuestion questionImg={questionImg} />
@@ -44,20 +47,32 @@ const ActView = () => {
         value={answer}
         onChange={handleUpdateAnswer}
       />
-      <div className="btn-group">
+      <div className="button-group">
         {currentQuestion > 0 && (
-          <button className="btn-previous" onClick={handlePreviousClick}>
+          <Button
+            className="btn-previous"
+            variant="secondary"
+            onClick={handlePreviousClick}
+          >
             Previous
-          </button>
+          </Button>
         )}
-        {currentQuestion === questions.length - 1 ? (
-          <button className="btn-progress" onClick={handleSubmitClick}>
+        {currentQuestion === lastAnswerableQuestion ? (
+          <Button
+            className="btn-progress"
+            variant="success"
+            onClick={handleSubmitClick}
+          >
             Submit
-          </button>
+          </Button>
         ) : (
-          <button className="btn-progress" onClick={handleNextClick}>
+          <Button
+            className="btn-progress"
+            variant="primary"
+            onClick={handleNextClick}
+          >
             Next
-          </button>
+          </Button>
         )}
       </div>
     </div>
