@@ -1,10 +1,11 @@
+import Alert from "react-bootstrap/Alert";
 import emptyMatrix from "../images/act-matrix-blank.png";
 
 const ResultsView = ({ answers }) => (
   <div className="result-view">
-    <div className="header">
+    <Alert className="header" variant="info">
       Do you think you might have the opportunity to notice these things?
-    </div>
+    </Alert>
     <div className="result">
       <img
         className="act-matrix"

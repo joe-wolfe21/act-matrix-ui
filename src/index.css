@@ -23,43 +23,47 @@ code {
   align-items: center;
 }
 
-.act-question {
-  max-width: 300px;
-  margin-bottom: 60px;
+.act-view .act-answer {
+  width: 300px;
+  height: 100px;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
 }
 
-.act-question img {
+.act-view .act-question {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.act-view .act-question img {
   max-width: 100%;
   height: auto;
   width: auto\9;
 }
 
-.act-answer {
-  width: 300px;
-  height: 100px;
-}
-
-.btn-group {
-  width: 300px;
-  margin-top: 15px;
+.button-group {
   position: relative;
+  width: 300px;
+  margin-top: 12px;
 }
 
-.btn-group .btn-progress {
+.button-group .btn-progress {
   position: absolute;
   right: 0;
+  width: 100px;
 }
 
-.btn-group .btn-previous {
+.button-group .btn-previous {
   position: absolute;
   left: 0;
+  width: 100px;
 }
 
 .result-view .header {
   font-size: 16px;
-  width: 200px;
-  margin: 0 auto;
-  padding-bottom: 25px;
+  width: 300px;
+  margin: 12px auto;
 }
 
 .result-view .result {
