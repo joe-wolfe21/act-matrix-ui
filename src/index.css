@@ -81,7 +81,7 @@ code {
 .result-view .result .bottom-right {
   position: absolute;
   bottom: 25%;
-  right: 56%;
+  left: 56%;
   overflow: auto;
   width: 115px;
   text-align: left;
@@ -90,7 +90,7 @@ code {
 .result-view .result .bottom-left {
   position: absolute;
   bottom: 25%;
-  left: 53%;
+  right: 53%;
   overflow: auto;
   width: 115px;
   text-align: left;
@@ -99,7 +99,7 @@ code {
 .result-view .result .top-right {
   position: absolute;
   top: 5%;
-  right: 56%;
+  left: 56%;
   overflow: auto;
   width: 115px;
   text-align: left;
@@ -108,7 +108,7 @@ code {
 .result-view .result .top-left {
   position: absolute;
   top: 5%;
-  left: 53%;
+  right: 53%;
   overflow: auto;
   width: 115px;
   text-align: left;
